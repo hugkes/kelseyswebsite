@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Wednesday Speaks</title>
+
+  <!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Making a dog speak with Flask and Ngrok">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Hugo 0.74.3" />
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://examplesite.com/css/wp-library.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="https://examplesite.com/css/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://examplesite.com/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="https://examplesite.com/images/favicon.png" type="image/x-icon">
+
+  <script>
+		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+
+  
+  
+</head>
+
+<body class="home page-template-default page wp-embed-responsive singular enable-search-modal has-post-thumbnail has-no-pagination not-showing-comments show-avatars footer-top-visible">
+	<header id="site-header" class="header-footer-group" role="banner">
+  <div class="header-inner section-inner">
+    <div class="header-titles-wrapper">
+      <button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal"
+        data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field"
+        aria-expanded="false">
+        <span class="toggle-inner">
+          <span class="toggle-icon">
+            <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+              width="23" height="23" viewbox="0 0 23 23">
+              <path
+                d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z"
+                transform="translate(-20 -31)" /></svg> </span>
+          <span class="toggle-text">Search</span>
+        </span>
+      </button>
+      <div class="header-titles">
+        <div class="site-title faux-heading"><a href="https://examplesite.com">Kelsey Hughes</a></div>
+      </div>
+
+      <button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"
+        data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+        <span class="toggle-inner">
+          <span class="toggle-icon">
+            <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+              width="26" height="7" viewbox="0 0 26 7">
+              <path fill-rule="evenodd"
+                d="M332.5,45 C330.567003,45 329,43.4329966 329,41.5 C329,39.5670034 330.567003,38 332.5,38 C334.432997,38 336,39.5670034 336,41.5 C336,43.4329966 334.432997,45 332.5,45 Z M342,45 C340.067003,45 338.5,43.4329966 338.5,41.5 C338.5,39.5670034 340.067003,38 342,38 C343.932997,38 345.5,39.5670034 345.5,41.5 C345.5,43.4329966 343.932997,45 342,45 Z M351.5,45 C349.567003,45 348,43.4329966 348,41.5 C348,39.5670034 349.567003,38 351.5,38 C353.432997,38 355,39.5670034 355,41.5 C355,43.4329966 353.432997,45 351.5,45 Z"
+                transform="translate(-329 -38)" /></svg> </span>
+          <span class="toggle-text">Menu</span>
+        </span>
+      </button>
+
+    </div>
+
+    <div class="header-navigation-wrapper">
+      <nav class="primary-menu-wrapper" aria-label="Horizontal" role="navigation">
+        <ul class="primary-menu reset-list-style">
+          
+          <li class="menu-item"><a href="https://examplesite.com/contact" aria-current="page">Contact</a></li>
+          
+        </ul>
+      </nav>
+
+      <div class="header-toggles hide-no-js">
+        <div class="toggle-wrapper nav-toggle-wrapper has-expanded-menu">
+          <button class="toggle nav-toggle desktop-nav-toggle" data-toggle-target=".menu-modal"
+            data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+            <span class="toggle-inner">
+              <span class="toggle-text">Menu</span>
+              <span class="toggle-icon">
+                <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                  width="26" height="7" viewbox="0 0 26 7">
+                  <path fill-rule="evenodd"
+                    d="M332.5,45 C330.567003,45 329,43.4329966 329,41.5 C329,39.5670034 330.567003,38 332.5,38 C334.432997,38 336,39.5670034 336,41.5 C336,43.4329966 334.432997,45 332.5,45 Z M342,45 C340.067003,45 338.5,43.4329966 338.5,41.5 C338.5,39.5670034 340.067003,38 342,38 C343.932997,38 345.5,39.5670034 345.5,41.5 C345.5,43.4329966 343.932997,45 342,45 Z M351.5,45 C349.567003,45 348,43.4329966 348,41.5 C348,39.5670034 349.567003,38 351.5,38 C353.432997,38 355,39.5670034 355,41.5 C355,43.4329966 353.432997,45 351.5,45 Z"
+                    transform="translate(-329 -38)" /></svg> </span>
+            </span>
+          </button>
+        </div>
+
+        <div class="toggle-wrapper search-toggle-wrapper">
+          <button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal"
+            data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field"
+            aria-expanded="false">
+            <span class="toggle-inner">
+              <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                width="23" height="23" viewbox="0 0 23 23">
+                <path
+                  d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z"
+                  transform="translate(-20 -31)" /></svg> <span class="toggle-text">Search</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-modal cover-modal header-footer-group" data-modal-target-string=".search-modal">
+    <div class="search-modal-inner modal-inner">
+      <div class="section-inner">
+        <form role="search" class="search-form" action="/search">
+          <label for="search-form-1">
+            <span class="screen-reader-text">Search for:</span>
+            <input id="search-query" type="search" class="search-field" placeholder="Search &hellip;"
+              name="s"/>
+          </label>
+          <input type="submit" class="search-submit" value="Search" />
+        </form>
+
+        <button class="toggle search-untoggle close-search-toggle fill-children-current-color"
+          data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal"
+          data-set-focus=".search-modal .search-field" aria-expanded="false">
+          <span class="screen-reader-text">Close search</span>
+          <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+            width="16" height="16" viewbox="0 0 16 16">
+            <polygon fill="" fill-rule="evenodd"
+              points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102" />
+          </svg> </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="menu-modal cover-modal header-footer-group" data-modal-target-string=".menu-modal">
+  <div class="menu-modal-inner modal-inner">
+    <div class="menu-wrapper section-inner">
+      <div class="menu-top">
+        <button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal"
+          data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
+          <span class="toggle-text">Close Menu</span>
+          <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+            width="16" height="16" viewbox="0 0 16 16">
+            <polygon fill="" fill-rule="evenodd"
+              points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102" />
+          </svg> </button>
+        <nav class="expanded-menu" aria-label="Expanded" role="navigation">
+          <ul class="modal-menu reset-list-style">
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="https://examplesite.com/" aria-current="page">Home</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="https://examplesite.com/about" aria-current="page">About</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="https://examplesite.com/blog" aria-current="page">Blog</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="https://examplesite.com/contact" aria-current="page">Contact</a></div>
+            </li>
+            
+          </ul>
+        </nav>
+        <nav class="mobile-menu" aria-label="Mobile" role="navigation">
+          <ul class="modal-menu reset-list-style">
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="https://examplesite.com/" aria-current="page">Home</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="https://examplesite.com/about" aria-current="page">About</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="https://examplesite.com/blog" aria-current="page">Blog</a></div>
+            </li>
+            
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <div class="ancestor-wrapper"><a href="https://examplesite.com/contact" aria-current="page">Contact</a></div>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+      <div class="menu-bottom">
+        <nav aria-label="Expanded Social links" role="navigation">
+          <ul class="social-menu reset-list-style social-icons fill-children-current-color">
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
+      href="mailto:kelsey0hughes@gmail.com"><span class="screen-reader-text">Email</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z">
+        </path>
+      </svg></a></li>
+  
+
+  
+  <li id="menu-item-412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a
+      href="https://github.com/hugkes"><span class="screen-reader-text">GitHub</span>
+      <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a></li>
+  
+
+  
+  <li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a
+      href="https://www.linkedin.com/in/kelsey-e-hughes/"><span class="screen-reader-text">LinkedIn</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M19,19H16V13.7A1.5,1.5 0 0,0 14.5,12.2A1.5,1.5 0 0,0 13,13.7V19H10V10H13V11.2C13.5,10.36 14.59,9.8 15.5,9.8A3.5,3.5 0 0,1 19,13.3M6.5,8.31C5.5,8.31 4.69,7.5 4.69,6.5A1.81,1.81 0 0,1 6.5,4.69C7.5,4.69 8.31,5.5 8.31,6.5A1.81,1.81 0 0,1 6.5,8.31M8,19H5V10H8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z">
+        </path>
+      </svg></a></li>
+  
+</ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<main id="site-content" role="main">
+		
+
+<article
+  class="post type-post status-publish format-standard has-post-thumbnail hentry category-art category-editing tag-block tag-editor tag-gutenberg tag-wordpress">
+  <header class="entry-header has-text-align-center">
+    <div class="entry-header-inner section-inner medium">
+      <div class="entry-categories">
+        <span class="screen-reader-text">Categories</span>
+        <div class="entry-categories-inner">
+          
+          <a href="/categories/projects" rel="category tag">Projects</a>
+          
+        </div>
+        
+      </div>
+      <h2 class="entry-title heading-size-1">Wednesday Speaks</h2>
+      <div class="post-meta-wrapper post-meta-single post-meta-single-top">
+        <ul class="post-meta">
+          <li class="post-author meta-wrapper">
+            <span class="meta-icon">
+              <span class="screen-reader-text">Post author</span>
+              <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                width="18" height="20" viewbox="0 0 18 20">
+                <path fill=""
+                  d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z" />
+              </svg> </span>
+            <span class="meta-text">
+              By 
+              <a href="/author/kelsey">Kelsey</a>
+               </span>
+          </li>
+          <li class="post-date meta-wrapper">
+            <span class="meta-icon">
+              <span class="screen-reader-text">Post date</span>
+              <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                width="18" height="19" viewbox="0 0 18 19">
+                <path fill=""
+                  d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z" />
+              </svg> </span>
+            <span class="meta-text">
+              August 20, 2020
+            </span>
+          </li>
+          <li class="post-comment-link meta-wrapper">
+            <span class="meta-icon">
+              <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                width="19" height="19" viewbox="0 0 19 19">
+                <path
+                  d="M9.43016863,13.2235931 C9.58624731,13.094699 9.7823475,13.0241935 9.98476849,13.0241935 L15.0564516,13.0241935 C15.8581553,13.0241935 16.5080645,12.3742843 16.5080645,11.5725806 L16.5080645,3.44354839 C16.5080645,2.64184472 15.8581553,1.99193548 15.0564516,1.99193548 L3.44354839,1.99193548 C2.64184472,1.99193548 1.99193548,2.64184472 1.99193548,3.44354839 L1.99193548,11.5725806 C1.99193548,12.3742843 2.64184472,13.0241935 3.44354839,13.0241935 L5.76612903,13.0241935 C6.24715123,13.0241935 6.63709677,13.4141391 6.63709677,13.8951613 L6.63709677,15.5301903 L9.43016863,13.2235931 Z M3.44354839,14.766129 C1.67980032,14.766129 0.25,13.3363287 0.25,11.5725806 L0.25,3.44354839 C0.25,1.67980032 1.67980032,0.25 3.44354839,0.25 L15.0564516,0.25 C16.8201997,0.25 18.25,1.67980032 18.25,3.44354839 L18.25,11.5725806 C18.25,13.3363287 16.8201997,14.766129 15.0564516,14.766129 L10.2979143,14.766129 L6.32072889,18.0506004 C5.75274472,18.5196577 4.89516129,18.1156602 4.89516129,17.3790323 L4.89516129,14.766129 L3.44354839,14.766129 Z" />
+              </svg> </span>
+            <span class="meta-text">
+              <a href="https://examplesite.com/blog/wednesdayspeaks/#comments">Comments<span class="screen-reader-text"> on
+                  Wednesday Speaks</span></a> </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <figure class="featured-media">
+    <div class="featured-media-inner section-inner medium">
+      <img width="1200" height="769" src="https://examplesite.com/images/wednesday_speaks_cover.png"
+        class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Wednesday Speaks"
+        sizes="(max-width: 1200px) 100vw, 1200px">
+    </div>
+  </figure>
+  
+  <div class="post-inner thin ">
+    <div class="entry-content">
+      <p>There are many ways to be productive when you are faced with indefinite time stuck inside your home. Making a dog shout lyrics to WAP is usually not one of them.</p>
+<p>This is Wednesday, our lovely skeleton horse.</p>
+<p>The idea for this project came from a friend who made a bot to speak out text that was sent by Facebook messenger to a Facebook page. I figured it would be a good <em>first ever coding project</em> to try and emulate something that already existed, and add some extra simple functionality. It turned out, as always, to be slightly more complex than I expected.</p>
+<h2 id="facebook-faliures">Facebook Faliures</h2>
+<p>There is a Python library called <code>fbmq</code> that allows one to interact with the Facebook Messenger Platform API.
+To create a simple Facebook messenger bot, you need to set up a Facebook page, and create a Facebook for Developers account.</p>
+<p>Unfortunately, Facebook has recently tightened security for their messenger bots.
+Making the webhook authenticate and the functionality to work as intended is very fiddly. In the end I decided for my use case, it would be more efficient and open to customisation if I made a web application for users to input text into instead. It would also force me to understand web servers better, and start experimenting with html and css. All of which were really the best learnings from this project.</p>
+<h2 id="a-minumum-viable-product">A Minumum Viable Product</h2>
+<p>The concept for the website app is fairly simple:</p>
+<ol>
+<li>The user inputs text into a form on a website</li>
+<li>The text is converted to speech using an API or library</li>
+<li>The speech is stored as an mp3 file on my local computer</li>
+<li>The mp3 file is read outloud by my operating system</li>
+<li>My computer is connected by Bluetooth to a small portable speaker (attached to an unassuming dog)</li>
+</ol>
+<p>As I&rsquo;m most comfortable working in Python, I used <code>Flask</code>'s web framework. Flask is a lightweight &lsquo;WSGI&rsquo;, which (in language I understand) simply forwards requests from a webserver to my application &lsquo;backend&rsquo;.</p>
+<p>My directory for the minimum viable product looked a little like this:</p>
+<pre><code>└── wednesdayspeaks/
+    ├── main.py
+    ├── templates/
+    |   └── home.html
+    └── static
+        ├──image.jpg
+        └── css/
+            └── main.css
+</code></pre>
+<p>Where: <code>main.py</code> has all the juicy application bits to handle steps 2-4,
+<code>home.html</code> provides the front-end for the user to input their text (step 1), and <code>main.css</code> provided some nice UI, without which you end up with an ugly app like so:</p>
+<p><img src="/images/wednesday_speaks_0.png" alt="wednesday_speaks_final1"></p>
+<p>Here is the MVP version of <code>main.py</code>:</p>
+<pre><code>from flask import Flask, render_template, request
+from gtts import gTTS
+import os
+
+# Config
+app = Flask(__name__)
+
+# Renders the generic homepage
+@app.route(&quot;/&quot;)
+def homepage():
+    return render_template(&quot;home.html&quot;, title=&quot;HOME PAGE&quot;)
+
+# Kicks off logic when request made, renders message
+@app.route(&quot;/&quot;, methods=[&quot;POST&quot;])
+def request_made():
+    text = request.form[&quot;text&quot;]
+    message = &quot;&quot;
+    if len(text) &lt; 250 and len(text.split()) &lt; 40:
+        tts = gTTS(text=text, lang=&quot;en&quot;)
+        tts.save(&quot;text.mp3&quot;)
+        # to start the file from python
+        os.system(&quot;start text.mp3&quot;)
+        message = &quot;thanks bbg&quot;
+    else:
+        message = &quot;Requested speech is too long. Please shorten your message.&quot;
+    return render_template(&quot;home.html&quot;, title=&quot;speaktowen&quot;, message = message)
+
+if __name__ == &quot;__main__&quot;:
+    app.run()
+</code></pre>
+<p>There&rsquo;s a few things to note in this code snippet. Firstly, I&rsquo;ve used Google&rsquo;s Text to Speech <code>gTTS</code> API to handle step 2 and 3. The <code>os.system</code> command handles step 4, which will be discussed in Deployment (spoiler: it&rsquo;s a nightmare to run in a cloud environment).</p>
+<p>You will notice that Flask looks for the text input with <code>request.form['text']</code>, which references the form element and &lsquo;text&rsquo; id in <code>home.html</code>:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Talk to Wednesday&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt; Make Wednesday Speak &lt;/h1&gt;
+        &lt;img src=&quot;/static/image.jpg&quot; alt=&quot;it is wednesday my dudes&quot;&gt;
+        &lt;p&gt;Type what you want Wednesday to say in the box below, then hit 'Submit'&lt;/p&gt;
+        &lt;form method=&quot;POST&quot;&gt;
+        &lt;div id= &quot;inputs&quot;&gt;
+            &lt;label for=&quot;text&quot;&gt;Text:&lt;/label&gt; &lt;br&gt;
+            &lt;input name=&quot;text&quot;&gt; &lt;br&gt;
+            &lt;input type=&quot;submit&quot;&gt;
+        &lt;/div&gt;
+        &lt;/form&gt;
+        {% if message %}
+            &lt;p&gt;{{ message }}&lt;/p&gt;
+        {% endif %}
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+<p>To get this running in a local environment, all that&rsquo;s needed is to run <code>main.py</code> from your terminal. Flask handles the rest.</p>
+<h2 id="deployment">Deployment</h2>
+<p>Getting my little app functional in a local environment was enough to make me jump for joy. You have to celebrate the little wins in quarantine.</p>
+<p>Next up, it was time to get my app onto the big wide web for everyone to use. From some research, everyone seemed to rave about how simple and easy Google App Engine (GAE) is to get your app hosted on a serverless environment. Great!! I thought. However, I had overlooked the fact that a core part of my app is reading out the saved mp3 file on my local computer (step 4). All my implementation of GAE and Google Cloud Storage was capable of was reading out out from the user&rsquo;s browser, rather than Wednesday herself.</p>
+<p>Finally I found a deployment method which would work for this use case: <code>ngrok</code>. Ngrok creates a public URL for your local web server. It&rsquo;s a great and very user-friendly method for testing.
+It&rsquo;s as simple as installing a <code>flask-ngrok</code> package, or downloading and installing ngrok itself.</p>
+<p>By this point, my app up on the web, and ready for trial by fire.</p>
+<h2 id="testing-and-iterating">Testing and Iterating</h2>
+<p>I wasn&rsquo;t ready for what was unleashed on my app.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/7jxeSdbjboU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>Besides the general filth that Wednesday was forced to say, I was pleased with the app&rsquo;s performance, but learned about some key bugs and improvements from the testing phase.</p>
+<h5 id="wait-what-did-she-just-say">Wait what did she just say??</h5>
+<p>Many times during testing, Wednesday would say something and we missed it because we were too loud.</p>
+<p>I needed to implement a feature that tracked the history of requests made to the web app. For this, a database was needed. Luckily, Flask has good integration with SQLAlchemy through a package called <code>flask_sqlalchemy</code>.</p>
+<p>To set up the database, you need some config but it&rsquo;s all very simple and all can be run inside <code>main.py</code>. The database was spun up quickly, and to allow all users to see past requests, I just needed to add another html page in <code>templates</code>and a route in <code>main.py</code>:</p>
+<pre><code># Renders the request history page
+@app.route(&quot;/requests_log&quot;, methods=[&quot;GET&quot;,&quot;POST&quot;])
+def get_table_data():
+    data = db.session.query(
+            Table.id, Table.username, Table.text_request).order_by(
+            Table.id.desc()).limit(5)
+    return render_template(&quot;requests_log.html&quot;,  data = data)
+</code></pre>
+<h5 id="delayed-speech">Delayed speech</h5>
+<p>While <code>gTTS</code> creates realistic sounding speech, the request to the API takes around 3-4 seconds. This delay is frustrating when you&rsquo;re just trying to get a dog to say something in response to a conversation in real-time.</p>
+<p>I needed to explore alternatives. I found a package called <code>pyttsx3</code> which works offline and is almost instantaneous. Sure, it sounds more like a robot, but it&rsquo;s almost more funny to have a robo-dog than a human dog.</p>
+<h5 id="simultaneous-requests">Simultaneous requests</h5>
+<p>A couple of times during testing, users tried to make requests to the app at the same time. This caused the server to crash, as a loop in <code>pyttsx3</code> was already started. <code>pyttsx3</code> has some inbuilt engine threading and queue capabilities, but these wouldn&rsquo;t work very well in my app. So I used Python&rsquo;s threading and queue libraries in an external loop to enable the app to simply stop a new request interrupting an running one.</p>
+<h5 id="malicious-wap-attacks">Malicious WAP attacks</h5>
+<p>Unfortunately my little app became a target for some skilled programmer friends, who created a bot to fire sections of songs at the URL repeatedly. This DOS attack culminated in Wednesday saying some particularly lurid lyrics and also the server being unaccessable to any other users.</p>
+<p>To protect against any further such attacks, I utilised an IP address tracker called <code>Limiter</code> to cut off access to the website if a user made more than 3 requests in a minute. That&rsquo;ll teach em.</p>
+<h5 id="mobile-friendly-ui">Mobile friendly UI</h5>
+<p>The UI I made in my original MVP was non-responsive and as most of the people using the app accessed it on mobile devices, this was not a great user experience. I added the following to <code>home.html</code> in the <code>&lt;head&gt;</code> tag to make the web version scale to mobile: <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></p>
+<h5 id="bluetooth-cutting">Bluetooth cutting</h5>
+<p>An frustrating but easy to fix bug arose when the cheap mini bluetooth speaker I purchased for this project started to cut off the first word of each text request, due to it &lsquo;sleeping&rsquo; to save battery between saying things. The fix was quick and dirty - add a word to each text string: <code>text = &quot;um&quot; + text</code>
+This fixed the bug perfectly, and we would never hear the &lsquo;um&rsquo; that prefaced the sentence.</p>
+<h5 id="unacceptable-requests">Unacceptable requests</h5>
+<p>Finally, perhaps the worst bug arose when some of my housemates used the app to turn against its creator. Hearing Wednesday say things like &lsquo;I hate Kelsey&rsquo; was entirely unacceptable. I implemented some custom rules to ensure any nasty comments were redirected to another housemate&hellip;</p>
+<pre><code>if &quot;hate&quot; in text:
+    text = &quot;I hate Anna&quot;
+</code></pre>
+<h5 id="security">Security</h5>
+<p>Even though ngrok supports tunnelling to a HTTPS url, there&rsquo;s always security concerns with exposing a local server. To combat this, it&rsquo;s possible to run the app on a virtual machine. I used VMBox to create a Windows machine, which to run smoothly required me to uninstall the Sims 4 on my physical machine (cry) but it&rsquo;s all worth it for that peace o&rsquo;mind.</p>
+<h5 id="the-final-product">The final product</h5>
+<p>Here&rsquo;s some screengrabs of the final site in action.</p>
+<p><img src="/images/wednesday_speaks_1.png" alt="wednesday_speaks_final1"></p>
+<p><img src="/images/wednesday_speaks_2.png" alt="wednesday_speaks_final1"></p>
+<p>This project was a great learning exercise. I filled some missing basic knowledge about website building, virtual machines and cloud platforms, while I also touched up technical skills in Flask, HTML and CSS. But most importantly, it was enjoyable (less so for Wednesday) and gave me a thirst to do more tinkering.</p>
+
+    </div>
+  </div>
+
+  <div class="section-inner">
+    <div class="post-meta-wrapper post-meta-single post-meta-single-bottom">
+      <ul class="post-meta">
+        <li class="post-tags meta-wrapper">
+          <span class="meta-icon">
+            <span class="screen-reader-text">Tags</span>
+            <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg"
+              width="18" height="18" viewBox="0 0 18 18">
+              <path fill=""
+                d="M15.4496399,8.42490555 L8.66109799,1.63636364 L1.63636364,1.63636364 L1.63636364,8.66081885 L8.42522727,15.44178 C8.57869221,15.5954158 8.78693789,15.6817418 9.00409091,15.6817418 C9.22124393,15.6817418 9.42948961,15.5954158 9.58327627,15.4414581 L15.4486339,9.57610048 C15.7651495,9.25692435 15.7649133,8.74206554 15.4496399,8.42490555 Z M16.6084423,10.7304545 L10.7406818,16.59822 C10.280287,17.0591273 9.65554997,17.3181054 9.00409091,17.3181054 C8.35263185,17.3181054 7.72789481,17.0591273 7.26815877,16.5988788 L0.239976954,9.57887876 C0.0863319284,9.4254126 0,9.21716044 0,9 L0,0.818181818 C0,0.366312477 0.366312477,0 0.818181818,0 L9,0 C9.21699531,0 9.42510306,0.0862010512 9.57854191,0.239639906 L16.6084423,7.26954545 C17.5601275,8.22691012 17.5601275,9.77308988 16.6084423,10.7304545 Z M5,6 C4.44771525,6 4,5.55228475 4,5 C4,4.44771525 4.44771525,4 5,4 C5.55228475,4 6,4.44771525 6,5 C6,5.55228475 5.55228475,6 5,6 Z">
+              </path>
+            </svg> </span>
+          <span class="meta-text">
+            <a href="/tags/flask" rel="tag">Flask</a>
+            ,
+            <a href="/tags/python" rel="tag">Python</a>
+            ,
+            <a href="/tags/ngrok" rel="tag">Ngrok</a>
+            ,
+            <a href="/tags/html" rel="tag">Html</a>
+            ,
+            <a href="/tags/css" rel="tag">Css</a>
+             </span>
+        </li>
+      </ul>
+
+
+      
+    </div>
+  </div>
+</article>
+
+
+	</main>
+	
+	<div class="footer-nav-widgets-wrapper header-footer-group">
+  <div class="footer-inner section-inner">
+    <div class="footer-top has-social-menu">
+      <nav aria-label="Social links" class="footer-social-wrapper">
+        <ul class="social-menu reset-list-style social-icons fill-children-current-color">
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a
+      href="mailto:kelsey0hughes@gmail.com"><span class="screen-reader-text">Email</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z">
+        </path>
+      </svg></a></li>
+  
+
+  
+  <li id="menu-item-412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a
+      href="https://github.com/hugkes"><span class="screen-reader-text">GitHub</span>
+      <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a></li>
+  
+
+  
+  <li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a
+      href="https://www.linkedin.com/in/kelsey-e-hughes/"><span class="screen-reader-text">LinkedIn</span><svg class="svg-icon" aria-hidden="true"
+        role="img" focusable="false" width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M19,19H16V13.7A1.5,1.5 0 0,0 14.5,12.2A1.5,1.5 0 0,0 13,13.7V19H10V10H13V11.2C13.5,10.36 14.59,9.8 15.5,9.8A3.5,3.5 0 0,1 19,13.3M6.5,8.31C5.5,8.31 4.69,7.5 4.69,6.5A1.81,1.81 0 0,1 6.5,4.69C7.5,4.69 8.31,5.5 8.31,6.5A1.81,1.81 0 0,1 6.5,8.31M8,19H5V10H8M20,2H4C2.89,2 2,2.89 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z">
+        </path>
+      </svg></a></li>
+  
+</ul>
+      </nav>
+    </div>
+
+</div>
+
+
+<footer id="site-footer" role="contentinfo" class="header-footer-group">
+  <div class="section-inner">
+    <div class="footer-credits">
+      <p class="footer-copyright">Copyright © 2020 a hugo theme by <a href="https://themefisher.com">themefisher</a></p>
+    </div>
+    <a class="to-the-top" href="#site-header">
+      <span class="to-the-top-long">
+        To the top <span class="arrow" aria-hidden="true">&uarr;</span> </span>
+      <span class="to-the-top-short">
+        Up <span class="arrow" aria-hidden="true">&uarr;</span> </span>
+    </a>
+  </div>
+</footer>
+
+
+<!-- Search index -->
+<script>
+  var indexURL = "https://examplesite.com/index.json"
+</script>
+
+
+
+<script src="https://examplesite.com/js/jquery.min.min.js"></script>
+
+
+<script src="https://examplesite.com/js/script.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://examplesite.com/js/search.min.js"></script>
+
+<script src="https://examplesite.com/plugins/search.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kelsey Hughes</title>
+    <link>https://examplesite.com/tags/</link>
+    <description>Recent content in Tags on Kelsey Hughes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Aug 2020 12:32:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://examplesite.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>css</title>
+      <link>https://examplesite.com/tags/css/</link>
+      <pubDate>Sat, 29 Aug 2020 12:32:36 +0000</pubDate>
+      
+      <guid>https://examplesite.com/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flask</title>
+      <link>https://examplesite.com/tags/flask/</link>
+      <pubDate>Sat, 29 Aug 2020 12:32:36 +0000</pubDate>
+      
+      <guid>https://examplesite.com/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://examplesite.com/tags/html/</link>
+      <pubDate>Sat, 29 Aug 2020 12:32:36 +0000</pubDate>
+      
+      <guid>https://examplesite.com/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ngrok</title>
+      <link>https://examplesite.com/tags/ngrok/</link>
+      <pubDate>Sat, 29 Aug 2020 12:32:36 +0000</pubDate>
+      
+      <guid>https://examplesite.com/tags/ngrok/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://examplesite.com/tags/python/</link>
+      <pubDate>Sat, 29 Aug 2020 12:32:36 +0000</pubDate>
+      
+      <guid>https://examplesite.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

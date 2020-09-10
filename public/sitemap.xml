@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://examplesite.com/author/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/blog/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/categories/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/tags/css/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/tags/flask/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/tags/html/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/author/kelsey/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/tags/ngrok/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/categories/projects/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/tags/python/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/tags/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/blog/wednesdayspeaks/</loc>
+    <lastmod>2020-08-29T12:32:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/search/</loc>
+  </url>
+  
+</urlset>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Author on Kelsey Hughes</title>
+    <link>https://examplesite.com/author/</link>
+    <description>Recent content in Author on Kelsey Hughes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Aug 2020 12:32:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://examplesite.com/author/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kelsey</title>
+      <link>https://examplesite.com/author/kelsey/</link>
+      <pubDate>Sat, 29 Aug 2020 12:32:36 +0000</pubDate>
+      
+      <guid>https://examplesite.com/author/kelsey/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
