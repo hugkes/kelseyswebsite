@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://examplesite.com"
+baseURL = "https://www.hugheskelsey.com/"
 title = "Kelsey Hughes"
 theme = "twentytwenty"
 languageName = "En"
