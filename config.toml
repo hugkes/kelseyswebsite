@@ -1,0 +1,99 @@
+######################## default configuration ####################
+baseURL = "https://examplesite.com"
+title = "Kelsey Hughes"
+theme = "twentytwenty"
+languageName = "En"
+languageCode = "en-us"
+# post pagination
+paginate = "6"
+# post excerpt
+summaryLength = "20"
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+# disable language
+disableLanguages = [] # desable language from here
+# google analytics
+googleAnalytics = "" # example : UA-123-45
+
+
+
+############################## Output ###############################
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+author = "author"
+
+############################## navigation ###############################
+
+# main menu
+[[menu.main]]
+name = "Home"
+URL = "/"
+weight = 1
+
+[[menu.main]]
+name = "About"
+URL = "about"
+weight = 2
+
+[[menu.main]]
+name = "Blog"
+URL = "blog"
+weight = 3
+
+[[menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 4
+
+# only desktop menu
+[[menu.desktop]]
+name = "Contact"
+URL = "contact"
+weight = 1
+
+
+#################### default parameters ################################
+[params]
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+
+
+# banner
+[params.banner]
+heading = "Welcome"
+image = "images/website_background.png"
+
+# blog
+[params.blog]
+heading = "Aspiring to work on interesting projects that combine data science, UX design and social impact."
+
+# call to action
+[params.call_to_action]
+enable = true
+title = "Contact Me"
+content = "Please reach out for further information on my projects, career related enquries, or just to compliment me on my wonderful taste."
+button_label = "Say Hello"
+button_url = "mailto: kelsey0hughes@gmail.com"
+
+# gallery
+[params.gallery]
+enable = false
+
+# footer
+[params.footer]
+copyright = "Copyright &copy; 2020 a hugo theme by [themefisher](https://themefisher.com)"
+
+############################# social site ########################
+[params.social]
+email = "kelsey0hughes@gmail.com"
+linkedin = "https://www.linkedin.com/in/kelsey-e-hughes/"
+github = "https://github.com/hugkes"
