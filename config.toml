@@ -13,8 +13,8 @@ disqusShortname = "" # get your shortname form here : https://disqus.com
 # disable language
 disableLanguages = [] # desable language from here
 # google analytics
+#google_tag_manager = ""
 googleAnalytics = "" # example : UA-177804093-1
-
 
 
 ############################## Output ###############################
@@ -66,11 +66,10 @@ weight = 1
 description = "This is meta description"
 author = "Themefisher"
 
-
 # banner
 [params.banner]
 heading = "Welcome"
-image = "images/website_background.png"
+image = "images/website_background.jpg"
 
 # blog
 [params.blog]
