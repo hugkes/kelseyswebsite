@@ -15,7 +15,9 @@ draft: false
 
 There are many ways to be productive when you are faced with indefinite time stuck inside your home. Making a dog shout lyrics to WAP is usually not one of them.
 
-This is Wednesday, our lovely skeleton horse. 
+This is Wednesday, our lovely noodle horse.
+
+![wednesday](/images/wednesday_speaks_3.jpeg)
 
 The idea for this project came from a friend who made a bot to speak out text that was sent by Facebook messenger to a Facebook page. I figured it would be a good *first ever coding project* to try and emulate something that already existed, and add some extra simple functionality. It turned out, as always, to be slightly more complex than I expected.
 
