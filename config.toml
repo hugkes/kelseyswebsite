@@ -13,9 +13,7 @@ disqusShortname = "" # get your shortname form here : https://disqus.com
 # disable language
 disableLanguages = [] # desable language from here
 # google analytics
-#google_tag_manager = ""
-googleAnalytics = "" # example : UA-177804093-1
-
+googleAnalytics = "UA-177804093-1"
 
 ############################## Output ###############################
 [outputs]
