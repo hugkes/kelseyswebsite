@@ -1,5 +1,5 @@
 ---
-title: "Wednesday Speaks"
+title: "Wennie Speaks"
 date: 2020-08-29T12:32:36+00:00
 image : "images/wednesday_speaks_cover.png"
 # author
