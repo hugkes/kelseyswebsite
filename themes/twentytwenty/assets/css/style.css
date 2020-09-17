@@ -6473,8 +6473,8 @@ a.to-the-top>* {
 
 .column {
 	width: 50%;
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 
 @media (min-width: 768px) {
